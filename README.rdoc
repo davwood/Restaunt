@@ -1,0 +1,26 @@
+== README
+
+Week 8 of Maker's Academy. Friday test.
+
+Aim was to build a Rails app similar to Yelp, which lists restaurants and reviews.
+
+Technologies:
+Ruby 2.0
+Rails 4
+Rspec
+Capybara
+postgresql database
+
+Main Features:
+* You can create a new restaurant using a form - a restaurant has a name and a description.
+* There should be an index page listing all restaurants
+* You can click on a restaurant to go that restaurant's page.
+* You can write a review of a restaurant and give it a score (1-5).
+
+If I have time:
+* Sign in / Sign Out / Sign up
+* Editing of the data
+* Average review scores
+* Make it look good with CSS / javascript.
+
+<tt>rake doc:app</tt>.
