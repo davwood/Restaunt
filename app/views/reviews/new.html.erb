@@ -1,0 +1,10 @@
+Review this
+
+<%= form_for [@restaurant, @review], url: {action: "create"} do |f| %>	
+	<%= f.hidden_field :restaurant_id %>
+	<%= f.label :review %>
+	<%= f.text_area :review, size: "30x4", placeholder: "enter your review" %>
+	<%= f.label :score %>
+	<%= f.number_field :score, :min => 1, :max => 5 %>
+	<%= f.submit('Review') %>
+<% end %>

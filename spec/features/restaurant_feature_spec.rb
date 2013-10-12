@@ -16,6 +16,23 @@ describe 'a restaurant' do
 
 		expect(page).to have_content('Fresh Fish and Chips')
 	end
+
+	it 'can show the reviews of the restaurant' do
+		Review.create(:review => 'Really good food', :score => 4, :restaurant_id => 1)
+		visit restaurants_path
+
+		click_link 'Fish Club'
+		expect(page).to have_content 'Really good food'
+	end
+
+	it 'can show average the scores of the reviews' do
+		Review.create(:review => 'Really good food', :score => 4, :restaurant_id => 1)
+		Review.create(:review => 'Disgusting food', :score => 1, :restaurant_id => 1)
+		visit restaurants_path
+
+		click_link 'Fish Club'
+		expect(page).to have_content 'Disgusting food'
+	end
 end
 
 describe 'restaurants' do
