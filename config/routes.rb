@@ -5,6 +5,12 @@ Restaunt::Application.routes.draw do
   resources :restaurants do
     resources :reviews, only: [:new, :create]
   end
+  resources :users
+  resources :sessions
+  
+  match '/sign_up',  to: 'users#new',        via: 'get'
+  match '/sign_in',  to: 'sessions#new',     via: 'get'
+  match '/sign_out', to: 'sessions#destroy', via: 'delete'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
