@@ -32,6 +32,7 @@ describe 'a restaurant' do
 
 		click_link 'Fish Club'
 		expect(page).to have_content 'Disgusting food'
+		expect(page).to have_content '2.5'
 	end
 end
 
@@ -64,7 +65,7 @@ describe 'new restaurant form' do
 		expect(page).to have_content 'Tasty tasty chicken with lots of spice' 
 	end
 
-	it 'should not accept a new quiz without a title' do
+	it 'should not accept a new restaurant without a name' do
       visit new_restaurant_path
       fill_in 'Description', with: 'Tasty tasty chicken with lots of spice'
       click_button "Add Restaurant"
@@ -72,7 +73,7 @@ describe 'new restaurant form' do
       expect(page).to have_content 'error'
     end
 
-    it 'should not accept a new quiz without a description' do
+    it 'should not accept a new restaurant without a description' do
       visit new_restaurant_path
       fill_in 'Name', with: 'Nandos'
       click_button "Add Restaurant"
