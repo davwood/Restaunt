@@ -1,5 +1,6 @@
 Restaunt::Application.routes.draw do
 
+  get "users/new"
   root 'restaurants#index'
   resources :restaurants do
     resources :reviews, only: [:new, :create]
