@@ -1,3 +1,8 @@
+<div class="container">
+	<h2>Enter your details here to sign up</h2>
+</div>
+
+<div class="container">
 <%= form_for @user, html: {class: "form"} do |f| %>
   <%= f.text_field :first_name, placeholder: 'First name' %>
   <%= f.text_field :last_name, placeholder: 'Last name' %>
@@ -6,4 +11,4 @@
   <%= f.text_field :password_confirmation, placeholder: 'Password confirmation' %>
   <%= f.submit('Sign up') %>
 <% end %>
-
+</div>

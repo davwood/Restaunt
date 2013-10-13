@@ -1,10 +1,28 @@
-Review this
+<div class="container">
+<h2>Review the restaurant below</h2>
+</div>
 
+<div class="container">
 <%= form_for [@restaurant, @review], url: {action: "create"} do |f| %>	
 	<%= f.hidden_field :restaurant_id %>
-	<%= f.label :review %>
-	<%= f.text_area :review, size: "30x4", placeholder: "enter your review" %>
-	<%= f.label :score %>
-	<%= f.number_field :score, :min => 1, :max => 5 %>
-	<%= f.submit('Review') %>
+	<div class="row">
+		<div class="col-md-1">
+			<%= f.label :review %>
+		</div>
+		<div class="col-md-3">
+			<%= f.text_area :review, size: "30x4", placeholder: "enter your review" %>
+		</div>
+		<div class="col-md-8">
+			<%= f.label :score %>
+		
+			<%= f.number_field :score, :min => 1, :max => 5 %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<p> </p>
+			<%= f.submit('Review') %>
+		</div>
+	</div>
 <% end %>
+</div>

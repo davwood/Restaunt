@@ -6,15 +6,24 @@
 	<% if @restaurant.reviews.empty? %>
 	<p>No reviews for this restaurant</p>
 	<% else %>
-	<p>The average review for this restaurant is:</p>
-	<strong><%= @restaurant.average_review %></strong><br>
+	<h4>The average review for this restaurant is:</h4>
+	<h4><strong><%= @restaurant.average_review %></strong></h4><br>
+
+	<h3>Reviews</h3>
 	<% end %>
 </div>
 
+
 <div class="container">
-<ul class='review-list list-unstyled'>
+<ul class='list-unstyled'>
 <% @restaurant.reviews.each do |review| %>
-	<li>Score: <%= review.score %> Review: <%= review.review %></li>
+	<div class="review-list">
+	<li> 
+		<strong><%= review.score %>
+		<span> | </span></strong>
+		<em>  <%= review.review %></em>
+	</li>
+	</div>
 <% end %>
 </ul>
 </div>

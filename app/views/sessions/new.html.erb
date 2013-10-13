@@ -1,7 +1,9 @@
-<% provide(:title, "Sign in") %>
-<h1>Sign in</h1>
+<div class="container">
+	<h2>Sign in below</h2>
+</div>
 
-<%= form_for(:session, url: sessions_path) do |f| %>
+<div class="container">
+<%= form_for :session, url: {action: "create"} do |f| %>
   <%= f.label :email %>
   <%= f.text_field :email, placeholder: 'Email' %>
 
@@ -9,6 +11,8 @@
   <%= f.text_field :password, placeholder: 'Password' %>
   <%= f.submit('Sign in') %>
 <% end %>
+</div>
 
+<div class="container">
 <p>New user? <%= link_to "Sign up now!", sign_up_path %></p>
-
+</div>
