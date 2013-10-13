@@ -1,13 +1,13 @@
-<%= link_to "Sign up", sign_up_path %>
-<%= link_to "Sign in", sign_in_path %>
-
-<%= link_to "Sign out", sign_out_path, method: "delete" %>
-
 <h1>Restaurants</h1>
-
-<ul>
+<div class="container">
+<ul class='restaurant-list list-unstyled'>
 <% @restaurants.each do |r| %>
   <li><%= link_to r.name, restaurant_path(r) %></li>
 <% end %>
 
 </ul>
+</div>
+
+<div class="container">
+<%= link_to "Add a new restaurant", new_restaurant_path %>
+</div>
