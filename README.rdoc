@@ -9,7 +9,7 @@ Ruby 2.0
 Rails 4
 Rspec
 Capybara
-postgresql database
+Postgresql database
 
 Main Features:
 * You can create a new restaurant using a form - a restaurant has a name and a description.
